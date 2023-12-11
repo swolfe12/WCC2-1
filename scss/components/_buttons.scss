@@ -1,0 +1,78 @@
+
+.primary {
+	background-color: $brightgreen;
+	color: $white;
+	font-family: unisans;
+	padding: 10px;
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 30px;
+	border: 3px solid $brightgreen;
+	&:hover{
+		background-color: transparent;
+		color: $moss;
+		border: 3px solid $brightgreen;
+		font-weight: bold;
+	}
+}
+
+.secondary {
+	background: transparent;
+	border: 3px solid white;
+	color: white;
+	font-family: unisans;
+	height: 60px;
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 30px;
+
+		&:hover {
+		background: $white;
+		color: black;
+
+	}
+}
+/*
+.btn-container {
+	padding: 100px 50px 0px 50px;
+	width: 70%;
+	position: relative;
+	margin: auto auto;
+}*/
+
+.btn-container {
+	position: relative;
+	margin: auto auto;
+	display: flex;
+
+	.primary {
+		width: 45%;
+
+	}
+
+	@media(max-width: $small){
+    	flex-direction: column;
+
+    	.primary {
+    		width: 100%;
+    		margin: 30px 0 0 0;
+    	}
+    }
+
+}
+
+.test {
+	color: blue;
+}
+
+	.one {
+		.primary{
+			margin: auto;
+		}
+	}
+
+	.two {
+		.primary{
+			margin: 30px;
+		}
+	}

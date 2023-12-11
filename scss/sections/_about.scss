@@ -1,0 +1,46 @@
+.about {
+	//background-color: #E8E6E9;
+	//border-bottom: 2px solid #dcdcdc;
+	h2 {
+		font-family: 'unisans';
+		font-size: 36px;
+		//text-align: center;
+	}
+
+	.hero {
+		.header {
+		top: 280px;
+	}
+	}
+
+	.grace-message{
+		height: 500px;
+		border-bottom: 1px solid black;
+		padding: 50px 10%;
+	}
+	.leaders{
+		height: 500px;
+		border-bottom: 1px solid black;
+		padding: 50px 10%;
+
+		.blocks{
+			.block{
+				.img_container{
+					img{
+						object-fit:cover;
+					}
+				}
+			}
+		}
+	}
+	.gallery{
+		height: 500px;
+		border-bottom: 1px solid black;
+		padding: 50px 10%;
+	}
+	.history{
+		height: 500px;
+		border-bottom: 1px solid black;
+		padding: 50px 10%;
+	}
+}

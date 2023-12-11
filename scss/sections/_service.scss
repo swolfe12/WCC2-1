@@ -1,0 +1,40 @@
+.service{
+	padding: 50px;
+	display: inline-block;
+	.left{
+		float:left;
+		width: 50%;
+		text-align: center;
+		img{
+			height: 350px;
+			margin: auto;
+		}
+	}
+	.right{
+		float: left;
+		width: 50%;
+		h2{
+			font-family: 'unisans';
+			text-align: center;
+			font-size: 36px;
+		}
+		p{
+			font-size: 26px;
+    		font-family: "roboto light";
+    		color: black;
+    	}
+	}
+
+	@media(max-width: $medium){
+		.left{
+			width: 100%;
+
+			img {
+				overflow: hidden;
+			}
+		}
+		.right{
+			width: 100%;
+		}
+	}
+}

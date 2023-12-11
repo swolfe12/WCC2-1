@@ -1,0 +1,157 @@
+.blocks {
+	display: flex;
+
+		flex-flow: wrap;
+}
+
+
+.block {
+	//border-radius: 8px;
+    position: relative;
+    margin-right: 20px;
+	//opacity:.9;
+
+	.img_container {
+		width: 150px;
+		height: 150px;
+		margin: auto auto;	
+		opacity: 1;
+		display: block;
+		background-color: white;
+		border: .5px solid black;
+
+		img {
+			object-fit: contain;
+			width: 150px;
+			height: 150px;
+		}
+
+	}
+
+
+
+	a {
+		width: 100%;
+		display: block;
+	}	
+
+}
+
+
+@media(max-width: $xsmall){
+	.blocks {
+		padding-top: 0px;
+		flex-direction: column;
+	}
+	.block {
+		margin: 20px auto;
+    	width: 200px;
+		.img_container {
+			width: 200px;
+			height: 200px;
+			img {
+				width: 200px;
+				height: 200px;
+			}
+		}
+	}
+}
+@media(min-width: $xsmall) and (max-width: $small){
+	.blocks {
+		padding-top: 0px;
+	}
+	.block {
+		margin: 20px auto;
+    	flex-basis: 50%;
+
+    	.img_container {
+			width: 160px;
+			height: 160px;
+			img {
+				width: 160px;
+				height: 160px;
+			}
+		}
+	}
+}
+@media(min-width: $small) and (max-width: $medium){
+	.blocks {
+		padding-top: 0px;
+	}
+	.block {
+		margin: auto;
+    	flex-basis: 30%;
+    	margin-bottom: 40px;
+	}
+}
+@media(min-width: $medium) and (max-width: $large){
+	.blocks {
+		display: flex;
+	}
+	.block {
+		margin: auto;
+    	flex-basis: 30%;
+    	margin-bottom: 40px;
+    	.img_container {
+			width: 200px;
+			height: 200px;
+			img {
+				width: 200px;
+				height: 200px;
+			}
+		}
+	}
+}
+@media(min-width: $large)and (max-width: 1399px){
+	.blocks {
+		display: flex;
+	}
+	.block {
+		margin: auto;
+    	flex-basis: 30%;
+    	margin-bottom: 40px;
+    	.img_container {
+			width: 250px;
+			height: 250px;
+			img {
+				width: 250px;
+				height: 250px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1400px){
+	.blocks {
+		//display: flex;
+	}
+	.block {
+		margin: auto;
+    	flex-basis: 15%;
+    	margin-bottom: 40px;
+    	.img_container {
+			width: 200px;
+			height: 200px;
+			img {
+				width: 200px;
+				height: 200px;
+			}
+		}
+	}
+}
+
+/*
+#b1 {
+	//background: url('../assets/img/grace.PNG');
+	//background-size: contain;
+}
+
+#b2 {
+	//background: url('../assets/img/La Roca logo.JPG');
+	//background-size: contain;
+}
+
+#b3 {
+	//background: url('../assets/img/boyscouts.jpg');
+	//background-size: contain;
+}*/

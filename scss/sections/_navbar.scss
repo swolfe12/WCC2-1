@@ -1,0 +1,143 @@
+.nav {
+	height: 60px;
+	color: $white;
+	font-family: unisans;
+	position: absolute;
+	width: 100%;
+	top: 50px;
+
+	a {
+		text-decoration: none;
+		font-size: 22px;
+		color: $white;
+		float: right;
+		font-weight: bold;
+		padding: 20px 50px;
+
+		&:hover{
+			font-weight: bolder;
+			text-decoration: underline;
+		}
+		img{
+			width: 60px;
+		}
+
+	}
+	#brand {
+		font-weight: bold;
+		float: left;
+    	padding: 10px 20px;
+    	&:hover{
+    		cursor: default;
+    		text-decoration: none;
+		}
+	}	
+	.side-menu {
+		    display: none;
+		} /* Hide checkbox */
+
+
+
+}
+
+@media(max-width: $small){
+	.nav {
+		background-color: white;
+		top: 40px;
+		color: black;
+		width: 100%;
+    	height: auto;
+    	z-index: 1;
+
+		a {
+			color: black;
+			img {
+				width: 50px;
+			}
+		}
+		#brand {
+			float: none;
+			display: inline-block;
+		}
+		.nav-collapse {
+			position: fixed;
+    		overflow: hidden;
+    		background-color: white;
+    		top: 120px;
+			width: 100%;
+			max-height: 0;
+    		transition: max-height .5s ease-out;
+		}
+		.nav-collapse a {
+			display: block;
+			float: none;
+			color: black;
+			padding: 30px 14px;
+
+		}
+
+		.hamb{
+    		cursor: pointer;
+    		float: right;
+    		padding: 35px 20px;
+		}
+
+		.hamb-line {
+			background: black;
+		    display: block;
+		    height: 2px;
+		    position: relative;
+		    width: 24px;
+
+		} /* Style span tag */
+
+		.hamb-line::before,
+		.hamb-line::after{
+		    background: black;
+		    content: '';
+		    display: block;
+		    height: 100%;
+		    position: absolute;
+		    transition: all .2s ease-out;
+		    width: 100%;
+		}
+		.hamb-line::before{
+		    top: 5px;
+		}
+		.hamb-line::after{
+		    top: -5px;
+		}
+
+		
+		.side-menu:checked ~ .nav-collapse{
+    		max-height: 50%;
+		}
+		.side-menu:checked ~ .hamb .hamb-line {
+    		background: transparent;
+		}
+		.side-menu:checked ~ .hamb .hamb-line::before {
+    	transform: rotate(-45deg);
+    	top:0;
+		}
+		.side-menu:checked ~ .hamb .hamb-line::after {
+    		transform: rotate(45deg);
+    	top:0;
+	}
+
+	}
+
+}
+
+@media(min-width:$xsmall)and(max-width: $small){
+
+
+}
+@media(min-width:$small)and(max-width: $medium){
+
+}
+@media(min-width:$medium)and(max-width: $large){
+
+}
+@media(min-width:$large){
+
+}

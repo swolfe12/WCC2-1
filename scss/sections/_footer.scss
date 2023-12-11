@@ -1,0 +1,26 @@
+footer {
+	background-color: $light-black;
+	height: 500px;
+ 	
+
+	.col2 {
+		width: 50%;
+		color: white;
+		float: left;
+		padding: 20px;
+
+		@media (max-width: $small){
+			padding: 20px;
+			width: 100%;
+		}
+
+	}
+}
+
+.fab {
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+}
+.fa-twitter-square:before {
+    content: "\f081";
+}

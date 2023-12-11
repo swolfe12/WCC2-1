@@ -1,0 +1,30 @@
+@import 'basics/_colors.scss';
+@import 'basics/_fonts.scss';
+@import 'basics/_device_widths.scss';
+@import 'basics/_misc.scss';
+
+@import 'components/_buttons.scss';
+@import 'components/_blocks.scss';
+@import 'components/_links.scss';
+
+@import 'sections/_herobanner.scss';
+@import 'sections/_navbar.scss';
+@import 'sections/_mission.scss';
+@import 'sections/_location.scss';
+@import 'sections/_partners.scss';
+@import 'sections/_watch.scss';
+@import 'sections/_footer.scss';
+@import 'sections/_events.scss';
+@import 'sections/_alertbox.scss';
+@import 'sections/_service.scss';
+
+@import 'sections/_about.scss';
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin-top: -80px;
+}

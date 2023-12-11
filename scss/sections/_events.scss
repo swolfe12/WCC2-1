@@ -1,0 +1,61 @@
+
+.events{
+	/*
+	background: url("../assets/img/red_tree.jpeg");
+	background-position: left;
+	background-size: cover;
+	background-attachment: fixed;
+	*/
+	background-color: #f5f4f0;
+	//margin-left: -20px;
+	display: block;
+	margin: 100px 50px;
+    padding: 20px 50px 80px;
+    text-align:center;
+
+	h2{
+		font-family: 'unisans';
+		color: black;
+		text-align: center;
+		font-size: 36px;
+	}
+	.mobile{
+		display: none;
+	}
+
+
+}
+
+@media(max-width: $xsmall){
+	.events{
+		margin: 100px 0;
+		.mobile {
+			display: block;
+		}
+		.desktop{
+			display: none;
+		}
+	}
+}
+@media(min-width:$xsmall)and(max-width: $small){
+	.events{
+		//margin: 0;
+				.mobile {
+			display: block;
+		}
+		.desktop{
+			display: none;
+		}
+	}
+}
+@media(min-width:$small)and(max-width: $medium){
+	.events{
+	}
+	
+}
+@media(min-width:$medium)and(max-width: $large){
+	
+}
+@media(min-width:$large){
+
+}

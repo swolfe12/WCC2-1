@@ -1,0 +1,25 @@
+.location{
+	position: flex;
+	background-color: $rust;
+	padding: 50px;
+	height: 500px;
+	.left{
+	    float: left;
+		width: 40%;
+		font-family: unisans;
+		color: white;
+		font-size: 28px;
+		h1{
+			font-size: 34px;
+		}
+		.pin{
+			height: 70px;
+			width: 70px;
+		}
+	}
+	.right{
+		float: left;
+		margin-top: 30px;
+		margin-right: 10px;
+	}
+}

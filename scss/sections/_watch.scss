@@ -1,0 +1,55 @@
+.watch {
+	//background-color: $greige;
+	margin-top: 6px;
+	//margin-left: -20px;
+	color: black;
+	font-size: 26px;
+	font-family: unisans;
+	padding: 100px 0 150px;
+	display: inline-block;
+	width: 100%;
+
+	h2{
+		font-family: 'unisans';
+		text-align: center;
+		font-size: 36px;
+	}
+
+	.inner {
+		//background-color: white;
+	}
+
+	.left{
+		width: 50%;
+		float: left;
+		text-align: center;
+	}
+	.right {
+		width: 50%;
+		float: left;
+		text-align: center;
+	}
+		@media(max-width: $medium){
+		.left{
+			width: 100%;
+			margin-bottom: 40px;
+			.primary{
+				width: 50%;
+			}
+		}
+		.right{
+			width: 100%;
+		}
+	}
+}
+/*
+@media(max-width: $xsmall){
+	.watch{
+		//height: 1000px;
+	}
+}
+@media(min-width:$xsmall)and(max-width: $small){
+	.watch{
+		//height: 1000px;
+	}
+}*/

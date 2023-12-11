@@ -1,0 +1,604 @@
+@charset "UTF-8";
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'natural';
+  src: url("../assets/nature-beauty-font/NatureBeautyPersonalUse-9Y2DK.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'better-grade';
+  src: url("../assets/better-grade-font/BetterGrade-519DV.ttf") format("truetype"); }
+
+/*
+@font-face {
+	font-family: 'mangabey';
+	src: url('../assets/mangabey-font/MangabeyRegular-rgqVO.otf') format('opentype');
+}*/
+@font-face {
+  font-family: 'unisans';
+  src: url("../assets/uni-sans/Uni Sans Thin.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'unisans_thick';
+  src: url("../assets/uni-sans/Uni Sans Thick.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'roboto';
+  src: url("../assets/Roboto/Roboto-Black.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'roboto thin';
+  src: url("../assets/Roboto/Roboto-Thin.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'roboto light';
+  src: url("../assets/Roboto/Roboto-Light.ttf") format("truetype"); }
+
+/*
+320px — 480px: Mobile devices.
+481px — 768px: iPads, Tablets.
+769px — 1024px: Small screens, laptops.
+1025px — 1200px: Desktops, large screens.
+1201px and more — Extra large screens
+*/
+.primary {
+  background-color: #8aa127;
+  color: #FFF;
+  font-family: unisans;
+  padding: 10px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 30px;
+  border: 3px solid #8aa127; }
+  .primary:hover {
+    background-color: transparent;
+    color: #657130;
+    border: 3px solid #8aa127;
+    font-weight: bold; }
+
+.secondary {
+  background: transparent;
+  border: 3px solid white;
+  color: white;
+  font-family: unisans;
+  height: 60px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 30px; }
+  .secondary:hover {
+    background: #FFF;
+    color: black; }
+
+/*
+.btn-container {
+	padding: 100px 50px 0px 50px;
+	width: 70%;
+	position: relative;
+	margin: auto auto;
+}*/
+.btn-container {
+  position: relative;
+  margin: auto auto;
+  display: flex; }
+  .btn-container .primary {
+    width: 45%; }
+  @media (max-width: 768px) {
+    .btn-container {
+      flex-direction: column; }
+      .btn-container .primary {
+        width: 100%;
+        margin: 30px 0 0 0; } }
+
+.test {
+  color: blue; }
+
+.one .primary {
+  margin: auto; }
+
+.two .primary {
+  margin: 30px; }
+
+.blocks {
+  display: flex;
+  flex-flow: wrap; }
+
+.block {
+  position: relative;
+  margin-right: 20px; }
+  .block .img_container {
+    width: 150px;
+    height: 150px;
+    margin: auto auto;
+    opacity: 1;
+    display: block;
+    background-color: white;
+    border: .5px solid black; }
+    .block .img_container img {
+      object-fit: contain;
+      width: 150px;
+      height: 150px; }
+  .block a {
+    width: 100%;
+    display: block; }
+
+@media (max-width: 480px) {
+  .blocks {
+    padding-top: 0px;
+    flex-direction: column; }
+  .block {
+    margin: 20px auto;
+    width: 200px; }
+    .block .img_container {
+      width: 200px;
+      height: 200px; }
+      .block .img_container img {
+        width: 200px;
+        height: 200px; } }
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .blocks {
+    padding-top: 0px; }
+  .block {
+    margin: 20px auto;
+    flex-basis: 50%; }
+    .block .img_container {
+      width: 160px;
+      height: 160px; }
+      .block .img_container img {
+        width: 160px;
+        height: 160px; } }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .blocks {
+    padding-top: 0px; }
+  .block {
+    margin: auto;
+    flex-basis: 30%;
+    margin-bottom: 40px; } }
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .blocks {
+    display: flex; }
+  .block {
+    margin: auto;
+    flex-basis: 30%;
+    margin-bottom: 40px; }
+    .block .img_container {
+      width: 200px;
+      height: 200px; }
+      .block .img_container img {
+        width: 200px;
+        height: 200px; } }
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .blocks {
+    display: flex; }
+  .block {
+    margin: auto;
+    flex-basis: 30%;
+    margin-bottom: 40px; }
+    .block .img_container {
+      width: 250px;
+      height: 250px; }
+      .block .img_container img {
+        width: 250px;
+        height: 250px; } }
+
+@media (min-width: 1400px) {
+  .block {
+    margin: auto;
+    flex-basis: 15%;
+    margin-bottom: 40px; }
+    .block .img_container {
+      width: 200px;
+      height: 200px; }
+      .block .img_container img {
+        width: 200px;
+        height: 200px; } }
+
+/*
+#b1 {
+	//background: url('../assets/img/grace.PNG');
+	//background-size: contain;
+}
+
+#b2 {
+	//background: url('../assets/img/La Roca logo.JPG');
+	//background-size: contain;
+}
+
+#b3 {
+	//background: url('../assets/img/boyscouts.jpg');
+	//background-size: contain;
+}*/
+.external {
+  color: #3d3d3d;
+  text-decoration: none;
+  font-size: 24px;
+  text-align: center; }
+
+.hero {
+  background-position: left;
+  background-size: cover;
+  background-attachment: fixed; }
+  .hero .header {
+    color: #FFF;
+    text-align: center;
+    position: relative; }
+    .hero .header h1 {
+      font-family: better-grade;
+      font-weight: 400;
+      margin-bottom: 20px; }
+    .hero .header img {
+      height: 200px; }
+    .hero .header p {
+      width: 70%;
+      text-align: center;
+      margin: auto;
+      font-size: 24px;
+      font-family: unisans; }
+
+@media (max-width: 480px) {
+  .hero {
+    height: 800px; }
+    .hero .header {
+      top: 400px; }
+      .hero .header img {
+        height: 100px; } }
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .hero {
+    height: 800px; }
+    .hero .header {
+      top: 380px; }
+      .hero .header img {
+        height: 150px; } }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    height: 800px; }
+    .hero .header {
+      top: 360px; }
+      .hero .header h1 {
+        font-size: 100px; } }
+
+@media (min-width: 1024px) {
+  .hero {
+    height: 800px; }
+    .hero .header {
+      top: 380px; }
+      .hero .header h1 {
+        font-size: 120px; } }
+
+.home .hero {
+  background-image: url("../assets/img/header_img.jpg"); }
+
+.about .hero {
+  background: #657130;
+  height: 550px;
+  background-position: center; }
+
+.nav {
+  height: 60px;
+  color: #FFF;
+  font-family: unisans;
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  /* Hide checkbox */ }
+  .nav a {
+    text-decoration: none;
+    font-size: 22px;
+    color: #FFF;
+    float: right;
+    font-weight: bold;
+    padding: 20px 50px; }
+    .nav a:hover {
+      font-weight: bolder;
+      text-decoration: underline; }
+    .nav a img {
+      width: 60px; }
+  .nav #brand {
+    font-weight: bold;
+    float: left;
+    padding: 10px 20px; }
+    .nav #brand:hover {
+      cursor: default;
+      text-decoration: none; }
+  .nav .side-menu {
+    display: none; }
+
+@media (max-width: 768px) {
+  .nav {
+    background-color: white;
+    top: 40px;
+    color: black;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    /* Style span tag */ }
+    .nav a {
+      color: black; }
+      .nav a img {
+        width: 50px; }
+    .nav #brand {
+      float: none;
+      display: inline-block; }
+    .nav .nav-collapse {
+      position: fixed;
+      overflow: hidden;
+      background-color: white;
+      top: 120px;
+      width: 100%;
+      max-height: 0;
+      transition: max-height .5s ease-out; }
+    .nav .nav-collapse a {
+      display: block;
+      float: none;
+      color: black;
+      padding: 30px 14px; }
+    .nav .hamb {
+      cursor: pointer;
+      float: right;
+      padding: 35px 20px; }
+    .nav .hamb-line {
+      background: black;
+      display: block;
+      height: 2px;
+      position: relative;
+      width: 24px; }
+    .nav .hamb-line::before,
+    .nav .hamb-line::after {
+      background: black;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 100%; }
+    .nav .hamb-line::before {
+      top: 5px; }
+    .nav .hamb-line::after {
+      top: -5px; }
+    .nav .side-menu:checked ~ .nav-collapse {
+      max-height: 50%; }
+    .nav .side-menu:checked ~ .hamb .hamb-line {
+      background: transparent; }
+    .nav .side-menu:checked ~ .hamb .hamb-line::before {
+      transform: rotate(-45deg);
+      top: 0; }
+    .nav .side-menu:checked ~ .hamb .hamb-line::after {
+      transform: rotate(45deg);
+      top: 0; } }
+
+.mission {
+  margin-top: -20px;
+  color: black;
+  font-size: 26px;
+  font-family: "roboto light";
+  padding: 100px 10%; }
+  .mission h2 {
+    text-align: center;
+    font-size: 36px;
+    font-family: unisans; }
+  .mission p {
+    text-align: center; }
+
+.location {
+  position: flex;
+  background-color: #B75031;
+  padding: 50px;
+  height: 500px; }
+  .location .left {
+    float: left;
+    width: 40%;
+    font-family: unisans;
+    color: white;
+    font-size: 28px; }
+    .location .left h1 {
+      font-size: 34px; }
+    .location .left .pin {
+      height: 70px;
+      width: 70px; }
+  .location .right {
+    float: left;
+    margin-top: 30px;
+    margin-right: 10px; }
+
+.partners {
+  /*
+	background: url("../assets/img/red_tree.jpeg");
+	background-position: left;
+	background-size: cover;
+	background-attachment: fixed;
+	*/
+  padding: 20px 50px 50px;
+  background: #292828;
+  transform: skew(0deg, -3deg); }
+  .partners h2 {
+    font-family: 'unisans';
+    color: #d9d9d9;
+    text-align: center;
+    font-size: 36px; }
+  .partners a {
+    color: #d9d9d9; }
+
+@media (max-width: 480px) {
+  .partners {
+    margin: 0; } }
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .partners {
+    margin: 0; } }
+
+.watch {
+  margin-top: 6px;
+  color: black;
+  font-size: 26px;
+  font-family: unisans;
+  padding: 100px 0 150px;
+  display: inline-block;
+  width: 100%; }
+  .watch h2 {
+    font-family: 'unisans';
+    text-align: center;
+    font-size: 36px; }
+  .watch .left {
+    width: 50%;
+    float: left;
+    text-align: center; }
+  .watch .right {
+    width: 50%;
+    float: left;
+    text-align: center; }
+  @media (max-width: 1024px) {
+    .watch .left {
+      width: 100%;
+      margin-bottom: 40px; }
+      .watch .left .primary {
+        width: 50%; }
+    .watch .right {
+      width: 100%; } }
+
+/*
+@media(max-width: $xsmall){
+	.watch{
+		//height: 1000px;
+	}
+}
+@media(min-width:$xsmall)and(max-width: $small){
+	.watch{
+		//height: 1000px;
+	}
+}*/
+footer {
+  background-color: #292828;
+  height: 500px; }
+  footer .col2 {
+    width: 50%;
+    color: white;
+    float: left;
+    padding: 20px; }
+    @media (max-width: 768px) {
+      footer .col2 {
+        padding: 20px;
+        width: 100%; } }
+
+.fab {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400; }
+
+.fa-twitter-square:before {
+  content: "\f081"; }
+
+.events {
+  /*
+	background: url("../assets/img/red_tree.jpeg");
+	background-position: left;
+	background-size: cover;
+	background-attachment: fixed;
+	*/
+  background-color: #f5f4f0;
+  display: block;
+  margin: 100px 50px;
+  padding: 20px 50px 80px;
+  text-align: center; }
+  .events h2 {
+    font-family: 'unisans';
+    color: black;
+    text-align: center;
+    font-size: 36px; }
+  .events .mobile {
+    display: none; }
+
+@media (max-width: 480px) {
+  .events {
+    margin: 100px 0; }
+    .events .mobile {
+      display: block; }
+    .events .desktop {
+      display: none; } }
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .events .mobile {
+    display: block; }
+  .events .desktop {
+    display: none; } }
+
+.alert-box {
+  background: #292828;
+  color: white;
+  text-align: center;
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  top: 0px; }
+  @media (max-width: 768px) {
+    .alert-box {
+      z-index: 2; } }
+
+.service {
+  padding: 50px;
+  display: inline-block; }
+  .service .left {
+    float: left;
+    width: 50%;
+    text-align: center; }
+    .service .left img {
+      height: 350px;
+      margin: auto; }
+  .service .right {
+    float: left;
+    width: 50%; }
+    .service .right h2 {
+      font-family: 'unisans';
+      text-align: center;
+      font-size: 36px; }
+    .service .right p {
+      font-size: 26px;
+      font-family: "roboto light";
+      color: black; }
+  @media (max-width: 1024px) {
+    .service .left {
+      width: 100%; }
+      .service .left img {
+        overflow: hidden; }
+    .service .right {
+      width: 100%; } }
+
+.about h2 {
+  font-family: 'unisans';
+  font-size: 36px; }
+
+.about .hero .header {
+  top: 280px; }
+
+.about .grace-message {
+  height: 500px;
+  border-bottom: 1px solid black;
+  padding: 50px 10%; }
+
+.about .leaders {
+  height: 500px;
+  border-bottom: 1px solid black;
+  padding: 50px 10%; }
+  .about .leaders .blocks .block .img_container img {
+    object-fit: cover; }
+
+.about .gallery {
+  height: 500px;
+  border-bottom: 1px solid black;
+  padding: 50px 10%; }
+
+.about .history {
+  height: 500px;
+  border-bottom: 1px solid black;
+  padding: 50px 10%; }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin-top: -80px; }
