@@ -91,9 +91,6 @@
 	.hero{
 		background-image: url("../assets/img/header_img.jpg");
 		@media(max-width: $medium){
-			background-image: url("../assets/img/falltree.jpg");
-		}
-		@media (hover: none) {
 			background-image: url("..assets/img/falltree_mobile.jpg");
 			background-attachment: none;
 		}
