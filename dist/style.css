@@ -89,14 +89,12 @@
         width: 100%;
         margin: 30px 0 0 0; } }
 
-.test {
-  color: blue; }
-
 .one .primary {
   margin: auto; }
 
-.two .primary {
-  margin: 30px; }
+@media (min-width: 768px) {
+  .two .primary {
+    margin: 30px; } }
 
 .blocks {
   display: flex;
@@ -272,6 +270,9 @@
 
 .home .hero {
   background-image: url("../assets/img/header_img.jpg"); }
+  @media (max-width: 1024px) {
+    .home .hero {
+      background-image: url("../assets/img/falltree.jpg"); } }
 
 .about .hero {
   background: #657130;
@@ -452,13 +453,19 @@
     float: left;
     text-align: center; }
   @media (max-width: 1024px) {
-    .watch .left {
-      width: 100%;
-      margin-bottom: 40px; }
-      .watch .left .primary {
-        width: 50%; }
-    .watch .right {
-      width: 100%; } }
+    .watch {
+      padding-top: 0px; }
+      .watch .left {
+        width: 100%;
+        margin-bottom: 40px; }
+        .watch .left .primary {
+          width: 50%; }
+      .watch .right {
+        width: 100%; } }
+  @media (min-width: 1024px) {
+    .watch iframe {
+      width: 450px;
+      height: 350px; } }
 
 /*
 @media(max-width: $xsmall){
@@ -481,8 +488,7 @@ footer {
     padding: 20px; }
     @media (max-width: 768px) {
       footer .col2 {
-        padding: 20px;
-        width: 100%; } }
+        padding: 20px; } }
 
 .fab {
   font-family: "Font Awesome 5 Brands";
@@ -562,9 +568,12 @@ footer {
     .service .left {
       width: 100%; }
       .service .left img {
-        overflow: hidden; }
+        height: 250px; }
     .service .right {
       width: 100%; } }
+  @media (max-width: 480px) {
+    .service .left img {
+      height: 150px; } }
 
 .about h2 {
   font-family: 'unisans';
@@ -572,6 +581,9 @@ footer {
 
 .about .hero .header {
   top: 280px; }
+  @media (max-width: 768px) {
+    .about .hero .header {
+      font-size: 3em; } }
 
 .about .grace-message {
   height: 500px;
@@ -579,9 +591,13 @@ footer {
   padding: 50px 10%; }
 
 .about .leaders {
-  height: 500px;
   border-bottom: 1px solid black;
   padding: 50px 10%; }
+  .about .leaders .blocks .block p {
+    text-align: center;
+    margin-bottom: 5px; }
+    .about .leaders .blocks .block p.role {
+      margin-top: 0px; }
   .about .leaders .blocks .block .img_container img {
     object-fit: cover; }
 

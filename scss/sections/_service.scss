@@ -30,11 +30,19 @@
 			width: 100%;
 
 			img {
-				overflow: hidden;
+				height: 250px;
 			}
 		}
 		.right{
 			width: 100%;
+		}
+	}
+
+	@media(max-width: $xsmall){
+		.left{
+			img{
+				height: 150px;
+			}
 		}
 	}
 }

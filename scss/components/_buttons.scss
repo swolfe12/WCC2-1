@@ -60,11 +60,6 @@
     }
 
 }
-
-.test {
-	color: blue;
-}
-
 	.one {
 		.primary{
 			margin: auto;
@@ -73,6 +68,9 @@
 
 	.two {
 		.primary{
+			@media (min-width: $small){
 			margin: 30px;
-		}
-	}
+}		
+}
+}
+	

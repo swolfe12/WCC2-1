@@ -30,6 +30,7 @@
 		text-align: center;
 	}
 		@media(max-width: $medium){
+		padding-top: 0px;
 		.left{
 			width: 100%;
 			margin-bottom: 40px;
@@ -39,8 +40,15 @@
 		}
 		.right{
 			width: 100%;
+
 		}
 	}
+			@media(min-width: $medium){
+			iframe{
+				width: 450px;
+				height: 350px;
+			}
+		}
 }
 /*
 @media(max-width: $xsmall){
