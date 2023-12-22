@@ -603,7 +603,8 @@ footer {
     .service .left {
       width: 100%; }
       .service .left img {
-        height: 250px; }
+        height: auto;
+        width: 90%; }
     .service .right {
       width: 100%; }
       .service .right p {
