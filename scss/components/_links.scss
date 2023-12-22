@@ -3,6 +3,11 @@
 	text-decoration: none;
 	font-size: 24px;
 	text-align: center;
-
-	
+	display: inline-flex !important;
+	justify-content: center;
+	align-items: center;
+	i {
+		margin-left: 10px;
+    	margin-top: 2px;
+	}
 }

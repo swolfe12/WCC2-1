@@ -82,12 +82,16 @@
   display: flex; }
   .btn-container .primary {
     width: 45%; }
+  @media (max-width: 1024px) {
+    .btn-container .primary {
+      font-size: 28px; } }
   @media (max-width: 768px) {
     .btn-container {
       flex-direction: column; }
       .btn-container .primary {
         width: 100%;
-        margin: 30px 0 0 0; } }
+        margin: 30px 0 0 0;
+        font-size: 25px; } }
 
 .one .primary {
   margin: auto; }
@@ -213,7 +217,13 @@
   color: #3d3d3d;
   text-decoration: none;
   font-size: 24px;
-  text-align: center; }
+  text-align: center;
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center; }
+  .external i {
+    margin-left: 10px;
+    margin-top: 2px; }
 
 .hero {
   background-position: left;
@@ -256,7 +266,7 @@
   .hero {
     height: 800px; }
     .hero .header {
-      top: 360px; }
+      top: 330px; }
       .hero .header h1 {
         font-size: 100px; } }
 
@@ -264,15 +274,25 @@
   .hero {
     height: 800px; }
     .hero .header {
-      top: 380px; }
+      top: 340px; }
       .hero .header h1 {
         font-size: 120px; } }
 
 .home .hero {
-  background-image: url("../assets/img/header_img.jpg"); }
-  @media (max-width: 1024px) {
+  background-image: url("../assets/img/header_img.jpg");
+  margin-top: 90px; }
+  @media (hover: none) {
     .home .hero {
-      background-image: url("../assets/img/falltree.jpg"); } }
+      background-image: url("../assets/img/falltree_mobile.jpg");
+      background-attachment: scroll; } }
+  @media (max-width: 768px) {
+    .home .hero {
+      background-image: url("../assets/img/falltree_mobile.jpg");
+      background-attachment: scroll;
+      margin-top: 200px;
+      height: 650px; }
+      .home .hero .header {
+        top: 200px; } }
 
 .about .hero {
   background: #657130;
@@ -302,7 +322,7 @@
   .nav #brand {
     font-weight: bold;
     float: left;
-    padding: 10px 20px; }
+    padding: 5px 20px; }
     .nav #brand:hover {
       cursor: default;
       text-decoration: none; }
@@ -326,7 +346,6 @@
       float: none;
       display: inline-block; }
     .nav .nav-collapse {
-      position: fixed;
       overflow: hidden;
       background-color: white;
       top: 120px;
@@ -372,6 +391,10 @@
       transform: rotate(45deg);
       top: 0; } }
 
+@media (max-width: 1024px) {
+  #brand {
+    padding: 0 20px; } }
+
 .mission {
   margin-top: -20px;
   color: black;
@@ -384,6 +407,28 @@
     font-family: unisans; }
   .mission p {
     text-align: center; }
+  .mission .list {
+    padding: 20px 10px; }
+    .mission .list .list-item {
+      display: flex;
+      padding: 7px 0; }
+    .mission .list i {
+      position: absolute;
+      margin-top: 1px; }
+    .mission .list span {
+      text-align: left;
+      padding-left: 35px; }
+    .mission .list li::marker {
+      content: '> '; }
+  @media (max-width: 480px) {
+    .mission {
+      font-size: 18px; } }
+  @media (min-width: 480px) and (max-width: 768px) {
+    .mission {
+      font-size: 18px; } }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .mission {
+      font-size: 22px; } }
 
 .location {
   position: flex;
@@ -437,7 +482,7 @@
   color: black;
   font-size: 26px;
   font-family: unisans;
-  padding: 100px 0 150px;
+  padding: 100px 0 0px;
   display: inline-block;
   width: 100%; }
   .watch h2 {
@@ -467,20 +512,10 @@
       width: 450px;
       height: 350px; } }
 
-/*
-@media(max-width: $xsmall){
-	.watch{
-		//height: 1000px;
-	}
-}
-@media(min-width:$xsmall)and(max-width: $small){
-	.watch{
-		//height: 1000px;
-	}
-}*/
 footer {
   background-color: #292828;
-  height: 500px; }
+  height: 500px;
+  margin-top: 80px; }
   footer .col2 {
     width: 50%;
     color: white;
@@ -570,10 +605,12 @@ footer {
       .service .left img {
         height: 250px; }
     .service .right {
-      width: 100%; } }
-  @media (max-width: 480px) {
-    .service .left img {
-      height: 150px; } }
+      width: 100%; }
+      .service .right p {
+        font-size: 22px; } }
+  @media (max-width: 768px) {
+    .service .right p {
+      font-size: 18px; } }
 
 .about h2 {
   font-family: 'unisans';

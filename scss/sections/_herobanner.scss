@@ -2,6 +2,9 @@
 .hero {
 	
 	//background-image: linear-gradient(to bottom right, transparent, rgba(0,0,0, 0.5)), url("../assets/img/header_img.jpg");
+	background-position: left;
+	background-size: cover;
+	background-attachment: fixed;
 	//margin-left: -20px;
 
 	.header {
@@ -16,6 +19,7 @@
 		}
 
 		img {
+			//height: 200px;
 			height: 200px;
 		}
 
@@ -61,7 +65,7 @@
 		height: 800px;
 		
 		.header {
-			top: 360px;
+			top: 330px;
 
 			h1{
 				font-size: 100px;
@@ -73,12 +77,9 @@
 @media (min-width: $medium){
 	.hero {
 		height: 800px;
-		background-position: left;
-		background-size: cover;
-		background-attachment: fixed;
 		
 		.header {
-			top: 380px;
+			top: 340px;
 
 			h1{
 				font-size: 120px;
@@ -90,9 +91,19 @@
 .home {
 	.hero{
 		background-image: url("../assets/img/header_img.jpg");
-		@media(max-width: $medium){
-			background-image: url("..assets/img/falltree_mobile.jpg");
-			background-attachment: unset;
+		margin-top: 90px;
+		@media (hover: none) {
+			background-image: url("../assets/img/falltree_mobile.jpg");
+			background-attachment: scroll;
+		}
+		@media(max-width: $small){
+			background-image: url("../assets/img/falltree_mobile.jpg");
+			background-attachment: scroll;
+			margin-top: 200px;
+			height: 650px;
+			.header{
+				top: 200px;
+			}
 		}
 	}
 }

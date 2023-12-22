@@ -15,16 +15,35 @@
 
 	p {
 		text-align: center;
+			}
+
+	.list{
+		padding: 20px 10px;
+		.list-item{
+			display: flex;
+			padding: 7px 0;
+		}
+		i {
+			position: absolute;
+			margin-top: 1px;
+		}
+		span {
+			text-align: left;
+			padding-left: 35px;
+		}
+		li::marker {
+			content: '> ';
+		}
 	}
 
 	@media (max-width: $xsmall){
-		//height: 1500px;
+		font-size: 18px;
 	}
 	@media (min-width: $xsmall) and (max-width: $small){
-		//height: 1300px;
+		font-size: 18px;
 	}
 	@media (min-width: $small) and (max-width: $medium){
-		//height: 1500px;
+		font-size: 22px;
 	}
 }
 
