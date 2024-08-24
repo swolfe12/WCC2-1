@@ -18,9 +18,16 @@
 		color: black;
 		text-align: center;
 		font-size: 36px;
+		padding-bottom: 0px;
 	}
 	.mobile{
 		display: none;
+	}
+	iframe{
+		transition: 0.5s ease;
+		&:hover {
+			transform: scale(1.1);
+		}	
 	}
 
 

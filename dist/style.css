@@ -1,4 +1,22 @@
 @charset "UTF-8";
+.dark {
+  background: #292828;
+  color: white; }
+  .dark h1, .dark h2, .dark h3 {
+    color: #FFF; }
+  .dark .option2 {
+    color: #3d3d3d;
+    text-shadow: -1px 1px 0 #d9d9d9, 1px 1px 0 #d9d9d9, 1px -1px 0 #d9d9d9, -1px -1px 0 #d9d9d9; }
+
+.green {
+  background: #657130; }
+  .green .option2 {
+    color: #657130;
+    text-shadow: -1px 1px 0 #d9d9d9, 1px 1px 0 #d9d9d9, 1px -1px 0 #d9d9d9, -1px -1px 0 #d9d9d9; }
+
+.neutral {
+  background: #f7f5f9; }
+
 /* FONT PATH
  * -------------------------- */
 @font-face {
@@ -41,6 +59,35 @@
 1025px — 1200px: Desktops, large screens.
 1201px and more — Extra large screens
 */
+h1 {
+  font-family: better-grade;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: black;
+  font-size: 100px; }
+
+h2 {
+  font-family: 'unisans';
+  font-size: 36px;
+  color: black;
+  text-transform: uppercase;
+  opacity: 1; }
+  h2.sticky {
+    position: sticky;
+    top: 50px; }
+
+.option2 {
+  color: #FFF;
+  text-shadow: -1px 1px 0 black, 1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
+  font-family: Anton;
+  font-size: 36px;
+  opacity: 1 !important;
+  position: relative; }
+
+.option3 {
+  font-family: Anton;
+  color: #8aa127; }
+
 .primary {
   background-color: #8aa127;
   color: #FFF;
@@ -49,12 +96,14 @@
   width: 100%;
   text-transform: uppercase;
   font-size: 30px;
-  border: 3px solid #8aa127; }
+  border: 3px solid #8aa127;
+  transition: transform .3s ease; }
   .primary:hover {
     background-color: transparent;
-    color: #657130;
+    color: #8aa127;
     border: 3px solid #8aa127;
-    font-weight: bold; }
+    font-weight: bold;
+    transform: scale(1.05); }
 
 .secondary {
   background: transparent;
@@ -119,6 +168,9 @@
       object-fit: contain;
       width: 150px;
       height: 150px; }
+  .block :hover i {
+    margin-left: 12px;
+    margin-top: -1px; }
   .block a {
     width: 100%;
     display: block; }
@@ -223,7 +275,8 @@
   align-items: center; }
   .external i {
     margin-left: 10px;
-    margin-top: 2px; }
+    margin-top: 2px;
+    transition: transform .3s ease; }
 
 .hero {
   background-position: left;
@@ -233,10 +286,6 @@
     color: #FFF;
     text-align: center;
     position: relative; }
-    .hero .header h1 {
-      font-family: better-grade;
-      font-weight: 400;
-      margin-bottom: 20px; }
     .hero .header img {
       height: 200px; }
     .hero .header p {
@@ -313,7 +362,7 @@
     color: #FFF;
     float: right;
     font-weight: bold;
-    padding: 20px 50px; }
+    padding: 20px 30px; }
     .nav a:hover {
       font-weight: bolder;
       text-decoration: underline; }
@@ -402,9 +451,7 @@
   font-family: "roboto light";
   padding: 100px 10%; }
   .mission h2 {
-    text-align: center;
-    font-size: 36px;
-    font-family: unisans; }
+    text-align: center; }
   .mission p {
     text-align: center; }
   .mission .list {
@@ -441,8 +488,6 @@
     font-family: unisans;
     color: white;
     font-size: 28px; }
-    .location .left h1 {
-      font-size: 34px; }
     .location .left .pin {
       height: 70px;
       width: 70px; }
@@ -462,10 +507,8 @@
   background: #292828;
   transform: skew(0deg, -3deg); }
   .partners h2 {
-    font-family: 'unisans';
-    color: #d9d9d9;
     text-align: center;
-    font-size: 36px; }
+    position: relative; }
   .partners a {
     color: #d9d9d9; }
 
@@ -485,10 +528,6 @@
   padding: 100px 0 0px;
   display: inline-block;
   width: 100%; }
-  .watch h2 {
-    font-family: 'unisans';
-    text-align: center;
-    font-size: 36px; }
   .watch .left {
     width: 50%;
     float: left;
@@ -548,9 +587,14 @@ footer {
     font-family: 'unisans';
     color: black;
     text-align: center;
-    font-size: 36px; }
+    font-size: 36px;
+    padding-bottom: 0px; }
   .events .mobile {
     display: none; }
+  .events iframe {
+    transition: 0.5s ease; }
+    .events iframe:hover {
+      transform: scale(1.1); }
 
 @media (max-width: 480px) {
   .events {
@@ -580,71 +624,61 @@ footer {
 
 .service {
   padding: 50px;
-  display: inline-block; }
+  display: inline-block;
+  background: #f5f4f0; }
+  .service h2 {
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+  .service .subheader {
+    font-weight: bold;
+    text-decoration: underline; }
+  .service p {
+    font-size: 26px;
+    font-family: "roboto light";
+    color: #000;
+    text-align: center; }
   .service .left {
     float: left;
-    width: 50%;
-    text-align: center; }
+    width: 50%; }
     .service .left img {
       height: 350px;
       margin: auto; }
   .service .right {
     float: left;
     width: 50%; }
-    .service .right h2 {
-      font-family: 'unisans';
-      text-align: center;
-      font-size: 36px; }
-    .service .right p {
-      font-size: 26px;
-      font-family: "roboto light";
-      color: black; }
   @media (max-width: 1024px) {
+    .service p {
+      font-size: 22px; }
     .service .left {
       width: 100%; }
-      .service .left img {
-        height: auto;
-        width: 90%; }
     .service .right {
-      width: 100%; }
-      .service .right p {
-        font-size: 22px; } }
+      width: 100%; } }
   @media (max-width: 768px) {
-    .service .right p {
+    .service p {
       font-size: 18px; } }
 
-.about h2 {
-  font-family: 'unisans';
-  font-size: 36px; }
+.statement {
+  height: 200px;
+  text-align: center;
+  font-size: 30px;
+  margin: 50px;
+  margin-top: 0; }
+  .statement p {
+    padding: 70px 40px 0px 40px;
+    margin: auto auto;
+    font-family: "roboto light"; }
 
-.about .hero .header {
-  top: 280px; }
-  @media (max-width: 768px) {
-    .about .hero .header {
-      font-size: 3em; } }
+.about .hero {
+  background: url("../assets/img/panorama.jpg");
+  background-size: cover; }
+  .about .hero .header {
+    top: 280px; }
+    @media (max-width: 768px) {
+      .about .hero .header {
+        font-size: 3em; } }
 
-.about .grace-message {
-  height: 500px;
-  border-bottom: 1px solid black;
-  padding: 50px 10%; }
-
-.about .leaders {
-  border-bottom: 1px solid black;
-  padding: 50px 10%; }
-  .about .leaders .blocks .block p {
-    text-align: center;
-    margin-bottom: 5px; }
-    .about .leaders .blocks .block p.role {
-      margin-top: 0px; }
-  .about .leaders .blocks .block .img_container img {
-    object-fit: cover; }
-
-.about .gallery {
-  height: 500px;
-  border-bottom: 1px solid black;
-  padding: 50px 10%; }
-
-.about .history {
+.about .sticky-section {
   height: 500px;
   border-bottom: 1px solid black;
   padding: 50px 10%; }

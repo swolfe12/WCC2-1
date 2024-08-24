@@ -12,7 +12,6 @@ $burnt: #87392C;
 $darkgray: #3d3d3d;
 $alertblue:#283642;
 $alertgreen: #444b20;
-$brightgreen: #8aa127;
 
 $cobalt: #4a00e2;
 $dark-blue: #110057;
@@ -23,4 +22,40 @@ $dark-blue-hover: #4a00e2;
 $grey: #ccc;
 $yellow: #FFAA45;
 $light-blue: #7CAFD0;
+
+
 $light-black: #292828;
+$brightgreen: #8aa127;
+$dark-brown: #302626;
+
+
+.dark {
+    background: $light-black;
+    color: white;
+    h1, h2, h3 {
+        color: $white;
+    }
+
+    .option2 {
+        color: $darkgray;
+	    text-shadow: -1px 1px 0 #d9d9d9,
+		1px 1px 0 #d9d9d9,
+		1px -1px 0 #d9d9d9,
+		-1px -1px 0 #d9d9d9;
+    }
+}
+.green {
+    background: #657130;
+
+    .option2 {
+    color: #657130;
+	text-shadow: -1px 1px 0 #d9d9d9,
+		1px 1px 0 #d9d9d9,
+		1px -1px 0 #d9d9d9,
+		-1px -1px 0 #d9d9d9;
+    }
+}
+
+.neutral {
+	background: $neutral;
+}

@@ -8,11 +8,13 @@
 	text-transform: uppercase;
 	font-size: 30px;
 	border: 3px solid $brightgreen;
+	transition: transform .3s ease;
 	&:hover{
 		background-color: transparent;
-		color: $moss;
+		color: $brightgreen;
 		border: 3px solid $brightgreen;
 		font-weight: bold;
+		transform: scale(1.05);
 	}
 }
 

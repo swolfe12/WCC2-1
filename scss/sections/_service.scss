@@ -1,43 +1,50 @@
 .service{
 	padding: 50px;
 	display: inline-block;
+	background: #f5f4f0;
+	h2 {
+		text-align: center;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+
+	.subheader {
+		//font-family: "roboto";
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	p{
+		font-size: 26px;
+		font-family: "roboto light";
+		color: #000;
+		text-align: center;
+	}
 	.left{
 		float:left;
 		width: 50%;
-		text-align: center;
+		//text-align: center;
 		img{
 			height: 350px;
 			margin: auto;
+			//box-shadow: -20px 20px 0px 0px $light-black;
 		}
 	}
 	.right{
 		float: left;
 		width: 50%;
-		h2{
-			font-family: 'unisans';
-			text-align: center;
-			font-size: 36px;
-		}
-		p{
-			font-size: 26px;
-    		font-family: "roboto light";
-    		color: black;
-    	}
+
+
 	}
 
 	@media(max-width: $medium){
+		p {
+			font-size: 22px;
+		}
 		.left{
 			width: 100%;
-
-			img {
-				width: 90%;
-				height: auto;
-			}
 		}
 		.right{
-			p {
-				font-size: 22px;
-			}
+			
 			width: 100%;
 		}
 	}
@@ -50,10 +57,11 @@
 		}
 	}
 	@media(max-width: $small){
+		p {
+			font-size: 18px;
+		}
 		.right{
-			p {
-				font-size: 18px;
-			}
+			
 		}
 	}
 
