@@ -11,4 +11,8 @@
         font-family: "roboto light";
         
     }
+
+    @media (max-width: $small){
+        height: 350px;
+    }
 }
