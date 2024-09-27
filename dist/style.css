@@ -701,6 +701,9 @@ footer {
     .about .events iframe.desktop {
       display: none; } }
 
+.about .events span {
+  font-size: 24px; }
+
 .about .kids {
   background-color: #f5f4f0;
   display: block;
