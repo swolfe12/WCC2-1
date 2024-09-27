@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,8 @@
 	<link rel="stylesheet" href="dist/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Archivo+Black&display=swap" rel="stylesheet">
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v20.0"></script>
 </head>
 <body id="page-top" class="about">
 
@@ -39,60 +42,58 @@
       <h1></h1>
     </div>
   </div>
-  <!--
-<div class="white">
-  <h1>Welcome to WCC! </h1>
-  <h2>Join Us</h2>
-  <h2 class="option2"> Join Us</h2>
-  <h2 class="option3"> Join Us</h2>
-  <h3>Test h3</h3>
-  <div class="btn-container">
-    <button class="primary">Primary Button</button>
-  </div>
+ 
+<div class=" events">
+  <h2 class="">Upcoming Events and Groups</h2>
+  <iframe class="mobile" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FWoodstockCommunityChurch%2Fevents&tabs=timeline&width=300px&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300px" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+  <iframe class="desktop" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FWoodstockCommunityChurch%2Fevents&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+</div> 
+<div class="kids">
+  <h2 class="">PromiseLand</h2>
+  <span>We have kids's service every 2nd and 4th Sunday! </span>
 </div>
-<div class="neutral">
-  <h1>Welcome to WCC! </h1>
-  <h2>Join Us</h2>
-  <h2 class="option2"> Join Us</h2>
-  <h2 class="option3"> Join Us</h2>
-  <h3>Test h3</h3>
-  <div class="btn-container">
-    <button class="primary">Primary Button</button>
-  </div>
-</div>
-<div class="green">
-  <h1>Welcome to WCC! </h1>
-  <h2>Join Us</h2>
-  <h2 class="option2"> Join Us</h2>
-  <h2 class="option3"> Join Us</h2>
-  <h3>Test h3</h3>
-  <div class="btn-container">
-    <button class="primary">Primary Button</button>
-  </div>
-</div>
-<div class="dark">
-  <h1>Welcome to WCC! </h1>
-  <h2>Join Us</h2>
-  <h2 class="option2"> Join Us</h2>
-  <h2 class="option3"> Join Us</h2>
-  <h3>Test h3</h3>
-  <div class="btn-container">
-    <button class="primary">Primary Button</button>
-  </div>
-</div>
+<div class="contact">
+  
 
--->
-<div class="sticky-section">
-  <h2 class="sticky">Groups</h2>
-</div> 
-<div class="sticky-section">
-  <h2 class="sticky">Promise Land</h2>
-</div> 
-<div class="sticky-section">
-  <h2 class="sticky">Outreach</h2>
-</div> 
-<div class="sticky-section">
-  <h2 class="sticky">Contact Us</h2>
+  
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <h2 class="">Contact Us</h2>
+
+    <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="6b805c85-076d-473f-ad4e-91945c0dd06c">
+
+    <!-- Form Inputs. Each input must have a name="" attribute -->
+     <div class="name">
+      <label for="name">Name</label><br>
+      <input type="text" name="name" required><br>
+     </div>
+    <div class="email">
+      <label for="email">Email:</label><br>
+      <input type="email" name="email" required><br>
+    </div>
+    <div class="message">
+      <label for="message">Message:</label>
+      <br><textarea name="message" required></textarea><br>
+    </div>
+    
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <!-- Custom Confirmation / Success Page -->
+    <input type="hidden" name="redirect" value="/about.html">
+
+    <button class="secondary" type="submit">Submit Form</button>
+
+</form>
+<div class="right">
+  <h3> Address: <br>237 Rope Mill Rd,
+    Woodstock, GA 30188</h3>
+  <h3>Phone: 770.926.8990</h3>
+  <h3>Email: <br>wcc@wcchurch.org</h3>
+</div>
+  
+  </body>
+  </html>
 </div> 
 
 
