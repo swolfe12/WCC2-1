@@ -172,23 +172,32 @@
     </div>
   </div>
 
+
+    
+    
     <div class="events">
-  <h2 class="fade">Upcoming Services and Events</h2>
-  <div class="desktop">
-    <div style="display:flex;width: 480px;margin: auto;" class="desktop fb-page" 
-    data-tabs="events"
-    data-href="https://www.facebook.com/WoodstockCommunityChurch/events"
-    data-width="480">
-   </div>
-  </div>
-  <div class="mobile">
-    <div style="display:flex;width: 250px;margin: auto;" class="mobile fb-page" 
-    data-tabs="events"
-    data-href="https://www.facebook.com/WoodstockCommunityChurch/events"
-    data-width="250">
+      <h2 class="fade">Upcoming Services and Events</h2>
+      <div class="loading-indicator">
+        <div class="spinner"></div>
+      </div>
+      <div class="desktop fb-page-container">
+        <div style="display:flex;width: 480px;margin: auto;" class="desktop fb-page" 
+         data-tabs="events"
+         data-href="https://www.facebook.com/WoodstockCommunityChurch/events"
+         data-width="480">
+        </div>
+      </div>
+      <div class="mobile fb-page-container">
+        <div style="display:flex;width: 250px;margin: auto;" class="mobile fb-page" 
+         data-tabs="events"
+         data-href="https://www.facebook.com/WoodstockCommunityChurch/events"
+         data-width="250">
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+    
+    <script src="https://connect.facebook.net/en_US/sdk.js"></script>
+    
 
   <div class="partners dark">
     <h2>Our Partners</h2>
@@ -280,48 +289,69 @@
   </footer>
 
 </body>
-<script>
+
+    <script>
+      window.fbAsyncInit = function() {
+  FB.init({
+    appId      : 'YOUR_APP_ID',
+    xfbml      : true,
+    version    : 'v15.0',
+  });
+
+  // Add event listeners after Facebook SDK initialization
+  addEventListeners();
+};
+
+function addEventListeners() {
+  const fbPageContainers = document.querySelectorAll('.fb-page-container');
   
-  /* FadeIn Scroll */
-$(document).ready(function() {
-    
-    /* Every time the window is scrolled ... */
-    $(window).scroll( function(){
-        /* Check the location of each desired element */
-        $('.fade').each( function(i){
-            console.log(i);
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
-            /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
-                $(this).animate({'opacity':'1'},900);
-                    
-            }
-            
-        }); 
-        $('.zoom').each( function(i){
-            console.log(i);
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
-            /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
-              $(this).animate({
-                'left': '0%', // Start from off-screen to the left
-                'opacity': '1', // Fade in
-                'right': '0', // Ensure it doesn't move off-screen to the right
-            }, {
-                duration: 300,
-                easing: "linear" // You can change the easing function for different effects
-            });
-                    
-            }
-            
-        }); 
-    
+  fbPageContainers.forEach(container => {
+    container.addEventListener('load', function() {
+      const loadingIndicator = document.querySelector('.loading-indicator');
+      if (loadingIndicator) {
+        loadingIndicator.style.display = 'none';
+      }
+      
+      // Show the content immediately
+      container.style.opacity = '1';
     });
     
-});
-</script>
+    // Check if the plugin is loaded even if the 'load' event isn't triggered
+    checkPluginLoaded(container);
+  });
+}
+
+function checkPluginLoaded(container) {
+  setTimeout(() => {
+    if (container.querySelector('.fb-page')) {
+      console.log('Facebook Page plugin loaded');
+      removeSpinner(container);
+    } else {
+      console.log('Waiting for Facebook Page plugin...');
+      checkPluginLoaded(container);
+    }
+  }, 1000); // Wait for 1 second before checking again
+}
+
+function removeSpinner(container) {
+  const loadingIndicator = document.querySelector('.loading-indicator');
+  if (loadingIndicator) {
+    loadingIndicator.style.display = 'none';
+  }
+
+  // Show the content immediately
+  container.style.opacity = '1';
+}
+
+// Load the Facebook SDK asynchronously
+(function(d, s, id){
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+
+  </script>
 </html>

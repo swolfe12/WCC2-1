@@ -46,6 +46,10 @@
  
 <div class=" events">
   <h2 class="">Upcoming Events and Groups</h2>
+  <div class="loading-indicator">
+    <div class="spinner"></div>
+  </div>
+  
   <iframe id="if1" class="mobile" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FWoodstockCommunityChurch%2Fevents&tabs=timeline&width=300px&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300px" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" data-lazy="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
   <iframe id="if2" class="desktop" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FWoodstockCommunityChurch%2Fevents&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" data-lazy="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
@@ -128,5 +132,24 @@
     </div>
 
   </footer>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const iframes = document.querySelectorAll('iframe');
+    
+    iframes.forEach(iframe => {
+      iframe.onload = function() {
+        const loadingIndicator = document.querySelector('.loading-indicator');
+        if (loadingIndicator) {
+          loadingIndicator.style.display = 'none';
+        }
+      };
+      
+      // Add a small delay to ensure the iframe is fully loaded
+      setTimeout(() => {
+        iframe.style.opacity = '1';
+      }, 100);
+    });
+  });
+  </script>
 
 </html>
