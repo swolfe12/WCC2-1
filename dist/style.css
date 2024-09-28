@@ -670,7 +670,10 @@ footer {
     font-family: "roboto light"; }
   @media (max-width: 768px) {
     .statement {
-      height: 350px; } }
+      height: 300px; } }
+  @media (max-width: 480px) {
+    .statement {
+      height: 450px; } }
 
 .about .hero {
   background: url("../assets/img/panorama.jpg");

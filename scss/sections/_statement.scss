@@ -13,6 +13,9 @@
     }
 
     @media (max-width: $small){
-        height: 350px;
+        height: 300px;
+    }
+    @media (max-width: $xsmall){
+        height: 450px;
     }
 }
