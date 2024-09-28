@@ -59,6 +59,13 @@
 1025px — 1200px: Desktops, large screens.
 1201px and more — Extra large screens
 */
+a[href^="tel"] {
+  color: inherit;
+  /* Inherit text color of parent element. */
+  text-decoration: none;
+  /* Remove underline. */
+  /* Additional css `propery: value;` pairs here */ }
+
 h1 {
   font-family: better-grade;
   font-weight: 400;
