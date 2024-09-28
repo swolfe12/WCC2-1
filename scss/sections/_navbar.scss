@@ -66,6 +66,9 @@
 			width: 100%;
 			max-height: 0;
     		transition: max-height .5s ease-out;
+			flex-direction: column-reverse;
+        	display: flex;
+    
 		}
 		.nav-collapse a {
 			display: block;
