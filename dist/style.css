@@ -726,7 +726,7 @@ footer {
       height: 300px; } }
   @media (max-width: 480px) {
     .statement {
-      height: 450px; } }
+      height: 400px; } }
 
 .about .hero {
   background: url("../assets/img/panorama.jpg");
