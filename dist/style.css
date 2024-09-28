@@ -110,7 +110,7 @@ h2 {
   border: 3px solid white;
   color: white;
   font-family: unisans;
-  height: 60px;
+  padding: 10px;
   width: 100%;
   text-transform: uppercase;
   font-size: 30px; }
@@ -680,6 +680,9 @@ footer {
     @media (max-width: 768px) {
       .about .hero .header {
         font-size: 3em; } }
+  @media (max-width: 768px) {
+    .about .hero {
+      background-position-x: center; } }
 
 .about .sticky-section {
   position: sticky;
@@ -703,6 +706,10 @@ footer {
 
 .about .events span {
   font-size: 24px; }
+
+@media (max-width: 768px) {
+  .about .events {
+    margin: 0 0 50px 0; } }
 
 .about .kids {
   background-color: #f5f4f0;

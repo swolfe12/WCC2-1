@@ -17,6 +17,7 @@
 </head>
 <body id="page-top" class="about">
 
+
   <div class="alert-box">
     <div><p>Join us Sundays at 10:30am</p></div>
   </div>
@@ -45,8 +46,48 @@
  
 <div class=" events">
   <h2 class="">Upcoming Events and Groups</h2>
-  <iframe class="mobile" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FWoodstockCommunityChurch%2Fevents&tabs=timeline&width=300px&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300px" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-  <iframe class="desktop" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FWoodstockCommunityChurch%2Fevents&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+  <iframe id="if1" class="mobile" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FWoodstockCommunityChurch%2Fevents&tabs=timeline&width=300px&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300px" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" data-lazy="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+  <iframe id="if2" class="desktop" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FWoodstockCommunityChurch%2Fevents&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" data-lazy="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+  <script>
+    console.log("here");
+function watchElementForChanges(elementId) {
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      console.log(`Mutation detected on ${elementId}:`);
+      
+      if (mutation.type === 'childList') {
+        console.log('Child nodes changed:');
+        mutation.addedNodes.forEach(node => {
+          console.log(`Added node: ${node.nodeName}`);
+        });
+        
+        console.log('Removed nodes:');
+        mutation.removedNodes.forEach(node => {
+          console.log(`Removed node: ${node.nodeName}`);
+        });
+      }
+      
+      if (mutation.type === 'attributes') {
+        console.log('Attributes changed:');
+        Object.keys(mutation.attributeOldValue).forEach(attr => {
+          console.log(`Changed attribute: ${attr} from "${mutation.attributeOldValue[attr]}" to "${mutation.attributeNewValue[attr]}".`);
+        });
+      }
+    });
+  });
+
+  return observer;
+}
+
+// Watch for changes on #id1
+const id1Observer = watchElementForChanges('#if1');
+id1Observer.observe(document.getElementById('if1'), { childList: true, subtree: true });
+
+// Watch for changes on id2
+const id2Observer = watchElementForChanges('if2');
+id2Observer.observe(document.getElementById('if2'), { childList: true, subtree: true });
+
+  </script>
 </div> 
 <div class="events">
   <h2 class="">PromiseLand</h2>
@@ -123,4 +164,5 @@
     </div>
 
   </footer>
+
 </html>
