@@ -22,6 +22,11 @@
 	a{
 		color: #d9d9d9;
 	}
+	#b5 {
+		.img_container {
+			padding: 7px;
+		}
+	}
 }
 
 @media(max-width: $xsmall){
@@ -29,17 +34,17 @@
 		margin: 0;
 	}
 }
-@media(min-width:$xsmall)and(max-width: $small){
+@media(min-width:$xsmall) and (max-width: $small){
 	.partners{
 		margin: 0;
 	}
 }
-@media(min-width:$small)and(max-width: $medium){
+@media(min-width:$small)and (max-width: $medium){
 	.partners{
 	}
 	
 }
-@media(min-width:$medium)and(max-width: $large){
+@media(min-width:$medium)and (max-width: $large){
 	
 }
 @media(min-width:$large){
