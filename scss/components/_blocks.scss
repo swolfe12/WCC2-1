@@ -115,14 +115,14 @@
 	}
 	.block {
 		margin: auto;
-    	flex-basis: 30%;
+    	flex-basis: 25%;
     	margin-bottom: 40px;
     	.img_container {
-			width: 250px;
-			height: 250px;
+			width: 230px;
+			height: 230px;
 			img {
-				width: 250px;
-				height: 250px;
+				width: 230px;
+				height: 230px;
 			}
 		}
 	}
@@ -134,18 +134,19 @@
 	}
 	.block {
 		margin: auto;
-    	flex-basis: 15%;
+    	flex-basis: 12%;
     	margin-bottom: 40px;
     	.img_container {
-			width: 200px;
-			height: 200px;
+			width: 180px;
+			height: 180px;
 			img {
-				width: 200px;
-				height: 200px;
+				width: 180px;
+				height: 180px;
 			}
 		}
 	}
 }
+
 
 /*
 #b1 {
