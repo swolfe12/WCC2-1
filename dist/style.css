@@ -714,12 +714,12 @@ h2.sticky {
   width: 100%;
 }
 .watch .left {
-  width: 50%;
+  width: 40%;
   float: left;
   text-align: center;
 }
 .watch .right {
-  width: 50%;
+  width: 60%;
   float: left;
   text-align: center;
 }
@@ -857,15 +857,15 @@ footer .col2 {
 }
 .service .left {
   float: left;
-  width: 50%;
+  width: 45%;
 }
 .service .left img {
   height: 350px;
   margin: auto;
 }
 .service .right {
-  float: left;
-  width: 50%;
+  float: right;
+  width: 45%;
 }
 @media (max-width: 1024px) {
   .service p {
