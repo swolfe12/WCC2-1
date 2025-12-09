@@ -59,26 +59,26 @@
   <h2 class="">PromiseLand</h2>
   <span>We have kids' service every Sunday except First Sunday!</span>
 </div>
-<div class="contact">
+<div class="form contact">
   
 
   
   <form action="https://api.web3forms.com/submit" method="POST">
     <h2 class="">Contact Us</h2>
 
-    <!-- Replace with your Access Key -->
-    <input type="hidden" name="access_key" value="6b805c85-076d-473f-ad4e-91945c0dd06c">
+    <!-- Connect@wcchurch.com -->
+    <input type="hidden" name="access_key" value="7ed59a9a-9ff6-488a-ab9d-c4fa1b5a73db">
 
     <!-- Form Inputs. Each input must have a name="" attribute -->
-     <div class="name">
+     <div class="name field">
       <label for="name">Name</label><br>
       <input type="text" name="name" required><br>
      </div>
-    <div class="email">
+    <div class="email field">
       <label for="email">Email:</label><br>
       <input type="email" name="email" required><br>
     </div>
-    <div class="message">
+    <div class="message field">
       <label for="message">Message:</label>
       <br><textarea name="message" required></textarea><br>
     </div>
@@ -100,6 +100,52 @@
     Phone: 770.926.8990</h3>
   <h3><svg xmlns="http://www.w3.org/2000/svg" height="20px" fill="#fff" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"/></svg>
     Email: <br>connect@wcchurch.org</h3>
+</div>
+</div>
+
+<div class="form prayer">
+  
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <h2 class="left-header">Request Prayer</h2>
+
+    <!-- Prayer@wcchurch.com -->
+    <input type="hidden" name="access_key" value="03088679-1492-423f-94c8-317d80fbe566">
+
+    <!-- Form Inputs. Each input must have a name="" attribute -->
+     <div class="name field">
+      <label for="name">Name</label><br>
+      <input type="text" name="name" required><br>
+     </div>
+    <div class="email field">
+      <label for="email">Email:</label><br>
+      <input type="email" name="email" required><br>
+    </div>
+    <div class="message field">
+      <label for="message">Message:</label>
+      <br><textarea name="message" required></textarea><br>
+    </div>
+
+    <div class="checkcontact">
+      <input type="checkbox" id="contactme" name="Please contact me"/>
+      <label for="contactme">Please Contact Me</label>
+    </div>
+    
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="" class="hidden" style="display: none;">
+
+
+    <!-- Custom Confirmation / Success Page -->
+    <input type="hidden" name="redirect" value="/about.html">
+
+    <button class="secondary" type="submit">Submit Request</button>
+
+</form>
+<div class="right">
+  <h2 class="mobile-only" style="display:none">Request Prayer</h2>
+  <h3>Would you like the WCC elders to pray for you? </h3>
+  <h3>Please share your request, and the elders will hold this in confidence and pray for you. </h3>
+  <h3>We appreciate the opportunity to serve you in this way!</h3>
+</div>
 </div>
   
   </body>
