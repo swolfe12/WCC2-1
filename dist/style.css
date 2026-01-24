@@ -955,7 +955,48 @@ footer .col2 {
     z-index: 2;
   }
 }
+.alert-box.weather {
+  background: red;
+}
+@media (max-width: 768px) {
+  .alert-box.weather .alert-text {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-alert 12s linear infinite;
+  }
+}
 
+.alert-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 10px;
+}
+
+.alert-track {
+  display: inline-flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.alert-item {
+  display: inline-block;
+  padding-right: 3rem; /* space between repeats */
+}
+
+/* Mobile-only animation */
+.alert-track {
+  animation: alert-marquee 14s linear infinite;
+}
+
+/* Move one full item-width (50% of the track because we duplicated it) */
+@keyframes alert-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .service {
   padding: 50px;
   display: inline-block;
