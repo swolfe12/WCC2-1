@@ -33,3 +33,4 @@ jobs:
           source: "public/**"
           target: ${{ steps.vars.outputs.remote_dir }}
           rm: true
+          debug: true
