@@ -1,0 +1,35 @@
+name: Deploy WCC Site to IONOS
+
+on:
+  push:
+    branches: ["main", "staging"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # If you add a build step later, it goes here (e.g., npm install + build)
+
+      - name: Choose target directory
+        id: vars
+        run: |
+          if [[ "${GITHUB_REF_NAME}" == "main" ]]; then
+            echo "remote_dir=${{ secrets.SFTP_REMOTE_DIR_PROD }}" >> $GITHUB_OUTPUT
+          else
+            echo "remote_dir=${{ secrets.SFTP_REMOTE_DIR_STAGING }}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Deploy via SFTP (SCP Action)
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASS }}
+          port: ${{ secrets.SFTP_PORT }}
+          source: "./"
+          target: ${{ steps.vars.outputs.remote_dir }}
+          rm: true
