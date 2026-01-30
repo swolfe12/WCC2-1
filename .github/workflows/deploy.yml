@@ -23,14 +23,20 @@ jobs:
             echo "remote_dir=${{ secrets.SFTP_REMOTE_DIR_STAGING }}" >> $GITHUB_OUTPUT
           fi
 
-      - name: Deploy via SFTP (SCP Action)
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SFTP_HOST }}
-          username: ${{ secrets.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASS }}
-          port: ${{ secrets.SFTP_PORT }}
-          source: "public/**"
-          target: ${{ steps.vars.outputs.remote_dir }}
-          rm: true
-          debug: true
+      - name: Deploy via SFTP (lftp)
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+
+          REMOTE_DIR="${{ steps.vars.outputs.remote_dir }}"
+
+          lftp -u "${{ secrets.SFTP_USER }},${{ secrets.SFTP_PASS }}" sftp://${{ secrets.SFTP_HOST }}:${{ secrets.SFTP_PORT }} <<EOF
+          set sftp:auto-confirm yes
+          set net:max-retries 2
+          set net:timeout 30
+          set xfer:clobber on
+          mkdir -p "$REMOTE_DIR"
+          mirror -R --delete --verbose public/ "$REMOTE_DIR"
+          bye
+          EOF
